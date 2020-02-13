@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/basic.dart';
 
 class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
@@ -10,12 +9,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 20,
-        backgroundColor: Colors.black87,
+        elevation: 0,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.black87),
         actions: <Widget>[
           Icon(Icons.favorite_border),
           SizedBox(width: 15.0),
-          Icon(Icons.filter_list),
+          Icon(Icons.tune),
           SizedBox(width: 5.0),
         ],
       ),
@@ -36,17 +36,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       drawer: Drawer(
-          child: ListView(
-        children: <Widget>[
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text('Home'),
-          ),
-          ListTile(
-            leading: Icon(Icons.library_music),
-            title: Text('Music'),
-          ),
-        ],
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+            ),
+            ListTile(
+              leading: Icon(Icons.library_music),
+              title: Text('Music'),
+            ),
+          ],
       )),
     );
   }
